@@ -4,7 +4,6 @@ Virtual Network
 Storage account
 Machine size and image
 
-## Additional components
+## Change repository name
 
-Network interface
-Network Security Group..
+From First-repository to Terraform-Repo
