@@ -1,0 +1,4 @@
+## SCRIPT FOR CREATING MULTIPLE VIRTUAL NETWORK
+
+With 3 subnets each 
+one NSG
