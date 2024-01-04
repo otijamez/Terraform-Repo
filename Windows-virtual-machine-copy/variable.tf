@@ -10,3 +10,7 @@ variable "resource_group_name" {
   type = string
   description = "Please enter the resource group name"
 }
+variable "admin_password" {
+  type = string
+  description = "Please enter new password (must include uppercase, a symbol, a number and must be at least 8 characters)"
+}
