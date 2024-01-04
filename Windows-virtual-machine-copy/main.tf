@@ -33,7 +33,7 @@ variable "admin_password" {
 }
 
 locals {
-  resource_group = "resource_group"
+  resource_group = var.resource_group_name
   location = "eastus2"
   vm_name = "testvm"
   Admin_username = "security"
