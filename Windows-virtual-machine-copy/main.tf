@@ -27,13 +27,16 @@ variable "resource_group_name" {
   type = string
   description = "Please enter the resource group name"
 }
+variable "admin_password" {
+  type = string
+  description = "Please enter new password (must include uppercase, a symbol, a number and must be at least 8 characters)"
+}
 
 locals {
-  resource_group = "rg-terra22"
+  resource_group = "resource_group"
   location = "eastus2"
   vm_name = "testvm"
   Admin_username = "security"
-  admin_password = "Twistamain123@"
 }
 
 resource "azurerm_resource_group" "resource_group" {
@@ -122,7 +125,7 @@ resource "azurerm_windows_virtual_machine" "testvm" {
   location            = local.location
   size                = "Standard_DS1_V2"
   admin_username      = local.Admin_username
-  admin_password      = local.admin_password
+  admin_password      = var.admin_password
   network_interface_ids = [ azurerm_network_interface.NIC[count.index].id ]
 
   os_disk {
