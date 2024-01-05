@@ -1,6 +1,6 @@
 ## A SIMPLE DEPLOYMENT OF A WINDOWS VIRTUAL MACHINE COPY
 
-Deploy a simple Windows VM Count to Azure. This template also deploys a 
+Deploy a simple Windows VM Count to Azure with output function to sort out the private IP of each virtual machine deployed. This template also deploys a 
 Resource group,
 Storage account,
 Storage container, 
