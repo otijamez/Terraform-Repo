@@ -39,6 +39,14 @@ locals {
   Admin_username = "security"
 }
 
+output "private_ip_address" {
+  description = "Here the private IP address assigned to the VM's will be shown"
+  value = {
+    for ip in azurerm_network_interface.NIC:
+    ip.name=>ip.private_ip_address
+  }
+}
+
 resource "azurerm_resource_group" "resource_group" {
   name = var.resource_group_name
   location = local.location
